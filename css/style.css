@@ -1,0 +1,305 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+{
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+.rounded {
+	-moz-border-radius: 20px; /* Firefox */
+ 	-webkit-border-radius: 20px; /* Safari, Chrome */
+	border-radius: 20px; /* CSS3 */
+}
+
+/*******************************************/
+
+body {
+	background-image: url('../imgs/bg.gif');
+	font-size: 100%;
+	line-height: 1.4;
+	font-family:"Arvo", serif;
+    margin: 0 auto;
+  
+}
+
+p {
+	font-family:"Archivo Narrow", sans-serif;
+	font-size: 125%;
+	margin-bottom: 12px;
+}
+
+.span-column {
+  display: inline;
+  float: left;
+  margin: 4px;
+}
+
+#emGallery{
+	width: 95%;
+	padding-top: 10px;
+	margin: 0 auto;
+}
+
+#container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#socialmedia {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#info {
+	margin: 0 auto;
+}
+
+header {
+    width: 100%;
+	margin: 0 auto;
+}
+
+nav {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.button {
+	float: left;
+	width: 31%;
+	height: 33px;
+	margin: 0 1%;
+	background-color: yellow;
+}
+
+.button:hover, .button:active {
+	background-color: green;
+}
+
+nav ul li a { /*the links inside the li inside the ul inside the nav*/
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	color: green; 
+}
+
+nav ul li a:hover, nav ul li a.active {
+	color: white; 
+}
+
+#socialmedia {
+	width: 100%;
+	padding: 10px;
+	text-align: right;
+    background: rgba(200, 54, 54, 0.5);
+	min-height: 6%;
+}
+
+#socialmedia ul li a {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	height: 34px;
+	width: 38px;
+	background-image: url('../imgs/social-media-icons.png');
+	display: block;
+}
+
+#socialmedia ul li a{
+	float: left;
+	margin: 5px;
+}
+
+.pinterest a{
+	background-position: 0 -150px;
+}
+
+.twitter a{
+	background-position: 0 0;
+}
+
+.github a{
+	background-position: 0 -250px;
+}
+
+h1.logo {
+	text-indent: 100%; /*hide text*/
+	white-space: nowrap; /*hide text*/
+	overflow: hidden; /*hide text*/
+	background-size: 100%;
+    width: 100%;
+    line-height: 0;
+    padding-top: 100%; /*making image responsive - Where padding-top is calculated by dividing the image height by width*/
+    /*http://stackoverflow.com/questions/16721583/css-fluid-image-replacement*/
+}
+
+h2 {
+	color: black;
+	font-size: 140%;
+	margin-top: 12px;
+}
+
+#content {
+	background-color: yellow;
+	margin-top: 0;
+	min-height: 100%;
+}
+
+article {
+	width: 95%;
+	margin: 0 auto;
+	background-color: white;
+}
+
+#mainImage {
+	width: 100%;
+	background-image: url('http://placekitten.com/g/1000/1000');
+	background-size: cover;
+	background-color: yellow;
+	margin: 0 auto;
+	height: 100%;
+	background-repeat:no-repeat;
+
+}
+
+
+/******************************************
+/* 320px and up
+/*******************************************/
+
+@media only screen and (min-width: 320px) { /*once the screen reaches this width, apply this*/
+
+  #content {
+    font-size:85%;
+  }
+
+  #content{
+  	margin-top: 45px;
+  }
+
+  nav {
+  	font-size: 130%;
+  }
+
+  h1.logo {
+  	background-image: url('../imgs/logo-mobile.png');
+	background-repeat:no-repeat;
+	background-size: 100%;
+    width: 80%;
+    margin: 12px auto 0;
+    line-height: 0;
+    padding-top: 20%; /*making image responsive - Where padding-top is calculated by dividing the image height by width*/
+    /*http://stackoverflow.com/questions/16721583/css-fluid-image-replacement*/
+}
+
+
+/******************************************
+/* 480px and up
+/*******************************************/
+
+@media only screen and (min-width: 480px) {
+
+  #content {
+    font-size:95%;
+  }
+
+  nav {
+  	font-size: 140%;
+  }
+
+  #content{
+  	margin-top: 50px;
+  }
+
+  h1.logo {
+	padding-top: 20%;
+  }
+
+
+}
+
+/******************************************
+/* 768px and up
+/*******************************************/
+
+@media only screen and (min-width: 768px) {
+
+  	nav {
+  	font-size: 140%;
+  	}
+
+  	#content{
+  	margin-top: 0;
+  	}
+
+    h1.logo {
+	background-image: url('../imgs/logo.png');
+	padding-top: 90%;
+	}
+
+	#info {
+		width: 300px;
+		position: fixed;
+	    float: left;
+	}
+
+	#content {
+		margin-left: 300px;
+	}
+
+	.span-column {
+    width:48.5%;
+    margin: 0 1.2%; 
+  	}
+
+  	.alpha {
+  	margin-left: 0;
+  	}
+
+  	.omega {
+    margin-right: 0;
+  	}
+
+}
+
+/******************************************
+/* 990px and up
+/*******************************************/
+
+@media only screen and (min-width: 990px) {
+
+    nav {
+  	font-size: 140%;
+  	}
+
+}
+

@@ -1,0 +1,234 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+.rounded {
+	-moz-border-radius: 20px; /* Firefox */
+ 	-webkit-border-radius: 20px; /* Safari, Chrome */
+	border-radius: 20px; /* CSS3 */
+}
+
+/*******************************************/
+
+body {
+	background-image: url('../imgs/bg.gif');
+	font-size: 100%;
+	line-height: 1.4;
+	font-family:"Arvo", serif;
+}
+
+p {
+	font-family:"Archivo Narrow", sans-serif;
+	margin-bottom: 12px;
+}
+
+.span-column {
+  display: inline;
+  float: left;
+  margin: 4px;
+}
+
+#emGallery{
+	width: 80%;
+	margin: 0 auto;
+}
+
+#container{
+	width: 100%;
+	margin: 0 auto;
+	/*background-color: pink;*/
+}
+
+#info {
+	margin: 0 auto;
+	/*background-color: green;*/
+}
+
+header {
+    width: 100%;
+	margin: 0 auto;
+	/*background-color: gray;*/
+}
+
+nav {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.button {
+	float: left;
+	width: 31%;
+	height: 33px;
+	margin: 0 1%;
+	background-color: yellow;
+}
+
+.button:hover, .button:active {
+	background-color: green;
+}
+
+nav ul li a { /*the links inside the li inside the ul inside the nav*/
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	color: green; 
+}
+
+nav ul li a:hover, nav ul li a.active {
+	color: white; 
+}
+
+
+h1.logo {
+	background-image: url('../imgs/logo.png');
+	text-indent: 100%; /*hide text*/
+	white-space: nowrap; /*hide text*/
+	overflow: hidden; /*hide text*/
+	background-size: 100%;
+    width: 100%;
+    line-height: 0;
+    padding-top: 100%; /*making image responsive - Where padding-top is calculated by dividing the image height by width*/
+    /*http://stackoverflow.com/questions/16721583/css-fluid-image-replacement*/
+}
+
+h2 {
+	color: gray;
+}
+
+#content {
+	background-color: yellow;
+}
+
+article {
+	width: 95%;
+	margin: 7px auto;
+	background-color: white;
+}
+
+#mainImage {
+	width: 100%;
+	background-image: url('../imgs/main.jpg');
+	background-size: cover;
+	background-color: yellow;
+	margin: 0 auto;
+	height: 400px;
+	background-repeat:no-repeat;
+
+}
+
+img.ri {
+	max-width: 80%;
+	max-height: 80%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 5px;
+}
+
+/******************************************
+/* 320px and up
+/*******************************************/
+
+@media only screen and (min-width: 320px) { /*once the screen reaches this width, apply this*/
+
+  body {
+    font-size:85%;
+  }
+
+}
+
+
+/******************************************
+/* 480px and up
+/*******************************************/
+
+@media only screen and (min-width: 480px) {
+
+  body {
+    font-size:95%;
+  }
+
+}
+
+/******************************************
+/* 768px and up
+/*******************************************/
+
+@media only screen and (min-width: 768px) {
+
+  body {
+    font-size:100%;
+  }
+
+	#info {
+		width: 300px;
+		position: fixed;
+	    float: left;
+	}
+
+	#content {
+		margin-left: 300px;
+	}
+
+	.span-column {
+    width:48.5%;
+    margin: 0 1.2%; 
+  	}
+
+  	.alpha {
+  	margin-left: 0;
+  	}
+
+  	.omega {
+    margin-right: 0;
+  	}
+
+}
+
+/******************************************
+/* 990px and up
+/*******************************************/
+
+@media only screen and (min-width: 990px) {
+
+  body {
+  	font-size:140%;
+
+    margin: 0 auto;
+  }
+
+}
+
